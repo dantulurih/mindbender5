@@ -1,0 +1,142 @@
+<!-- wp:cover {"url":"https://s0.wp.com/wp-content/themes/pub/sunderland/assets/images/summertime_image.webp","dimRatio":10,"overlayColor":"base","isUserOverlayColor":true,"minHeight":100,"minHeightUnit":"vh","contentPosition":"center center","lock":{"move":false,"remove":true},"style":{"spacing":{"padding":{"right":"5vw","left":"5vw"}}},"textColor":"contrast","layout":{"type":"default"}} -->
+<div class="wp-block-cover has-contrast-color has-text-color" style="padding-right:5vw;padding-left:5vw;min-height:100vh"><span aria-hidden="true" class="wp-block-cover__background has-base-background-color has-background-dim-10 has-background-dim"></span><img class="wp-block-cover__image-background" alt="" src="https://s0.wp.com/wp-content/themes/pub/sunderland/assets/images/summertime_image.webp" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:group {"align":"full","style":{"dimensions":{"minHeight":"100vh"},"spacing":{"padding":{"right":"0vw","left":"0vw"}}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch","verticalAlignment":"space-between"}} -->
+    <div class="wp-block-group alignfull" style="min-height:100vh;padding-right:0vw;padding-left:0vw"><!-- wp:spacer {"height":"0px","style":{"layout":{"flexSize":"0px","selfStretch":"fixed"}}} -->
+    <div style="height:0px" aria-hidden="true" class="wp-block-spacer"></div>
+    <!-- /wp:spacer -->
+    
+    <!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"0.2em"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
+    <div class="wp-block-group alignwide"><!-- wp:site-title /-->
+    
+    <!-- wp:site-tagline {"fontSize":"small"} /--></div>
+    <!-- /wp:group -->
+    
+    <!-- wp:heading -->
+    <h2 class="wp-block-heading">ENTER YOUR DESTINATION</h2>
+    <!-- /wp:heading -->
+    
+    <!-- wp:html -->
+    <!-- Destination Input Field with Google Places Autocomplete -->
+    <p style="text-align: center; margin-top: 20px;">
+        <input
+            id="destination-input"
+            type="text"
+            placeholder="Enter your destination"
+            style="
+                width: 80%;
+                padding: 12px;
+                font-size: 1em;
+                border: none;
+                border-radius: 5px;
+                background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+                color: #FFD17B; /* Text color to match your theme */
+                outline: none;
+                text-align: center;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            "
+        />
+    </p>
+    
+    <!-- Google Places API Script -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places" async defer></script>
+    
+    <!-- JavaScript to Initialize Google Places Autocomplete -->
+    <script>
+        function initAutocomplete() {
+            const input = document.getElementById('destination-input');
+            
+            // Initialize the Google Places Autocomplete on the input field
+            const autocomplete = new google.maps.places.Autocomplete(input, {
+                types: ['address'], // Restrict to address types
+                componentRestrictions: { country: "us" } // Restrict to US; remove for global
+            });
+    
+            // Optional: Listen for the 'place_changed' event when a suggestion is selected
+            autocomplete.addListener('place_changed', function() {
+                const place = autocomplete.getPlace();
+                console.log('Selected place:', place.formatted_address);
+            });
+        }
+    
+        // Wait until the Google Maps API is loaded to initialize autocomplete
+        window.addEventListener('load', initAutocomplete);
+    </script>
+    
+    <!-- /wp:html -->
+    
+    <!-- wp:spacer {"height":"0px","style":{"layout":{"selfStretch":"fixed","flexSize":"0px"}}} -->
+    <div style="height:0px" aria-hidden="true" class="wp-block-spacer"></div>
+    <!-- /wp:spacer -->
+    
+    <!-- wp:paragraph -->
+    <p>SELECT YOUR MOOD</p>
+    <!-- /wp:paragraph -->
+    
+    <!-- wp:buttons -->
+    <div class="wp-block-buttons"><!-- wp:button -->
+    <div class="wp-block-button"><a class="wp-block-button__link wp-element-button">HAPPY</a></div>
+    <!-- /wp:button -->
+    
+    <!-- wp:button -->
+    <div class="wp-block-button"><a class="wp-block-button__link wp-element-button">SAD</a></div>
+    <!-- /wp:button -->
+    
+    <!-- wp:button -->
+    <div class="wp-block-button"><a class="wp-block-button__link wp-element-button">ANGRY </a></div>
+    <!-- /wp:button -->
+    
+    <!-- wp:button -->
+    <div class="wp-block-button"><a class="wp-block-button__link wp-element-button">ROMANTIC</a></div>
+    <!-- /wp:button -->
+    
+    <!-- wp:button -->
+    <div class="wp-block-button"><a class="wp-block-button__link wp-element-button">PARTY MODE</a></div>
+    <!-- /wp:button --></div>
+    <!-- /wp:buttons -->
+    
+    <!-- wp:buttons -->
+    <div class="wp-block-buttons"><!-- wp:button -->
+    <div class="wp-block-button"><a class="wp-block-button__link wp-element-button">PEACFUL</a></div>
+    <!-- /wp:button -->
+    
+    <!-- wp:button -->
+    <div class="wp-block-button"><a class="wp-block-button__link wp-element-button">DREAMY</a></div>
+    <!-- /wp:button -->
+    
+    <!-- wp:button -->
+    <div class="wp-block-button"><a class="wp-block-button__link wp-element-button">QUIRKY</a></div>
+    <!-- /wp:button -->
+    
+    <!-- wp:button -->
+    <div class="wp-block-button"><a class="wp-block-button__link wp-element-button">ENERGETIC</a></div>
+    <!-- /wp:button --></div>
+    <!-- /wp:buttons -->
+    
+    <!-- wp:buttons -->
+    <div class="wp-block-buttons"><!-- wp:button -->
+    <div class="wp-block-button"><a class="wp-block-button__link wp-element-button">GENERATE PLAYLIST</a></div>
+    <!-- /wp:button --></div>
+    <!-- /wp:buttons -->
+    
+    <!-- wp:group {"align":"wide","layout":{"type":"constrained"}} -->
+    <div class="wp-block-group alignwide"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","fontSize":"0.8rem"}}} -->
+    <p style="font-size:0.8rem;text-transform:uppercase"><strong>Available from 31st dec<br></strong><br><a href="/">more info here</a><br></p>
+    <!-- /wp:paragraph -->
+    
+    <!-- wp:social-links {"iconColor":"contrast","iconColorValue":"#ffd17b","size":"has-small-icon-size","className":"is-style-logos-only","style":{"spacing":{"blockGap":{"top":"1rem","left":"1rem"}}}} -->
+    <ul class="wp-block-social-links has-small-icon-size has-icon-color is-style-logos-only"><!-- wp:social-link {"url":"/","service":"instagram"} /--></ul>
+    <!-- /wp:social-links --></div>
+    <!-- /wp:group -->
+    
+    <!-- wp:spacer {"height":"60px","style":{"layout":{"flexSize":"60px","selfStretch":"fixed"}}} -->
+    <div style="height:60px" aria-hidden="true" class="wp-block-spacer"></div>
+    <!-- /wp:spacer --></div>
+    <!-- /wp:group -->
+    
+    <!-- wp:paragraph -->
+    <p></p>
+    <!-- /wp:paragraph --></div></div>
+    <!-- /wp:cover -->
+    
+    <!-- wp:paragraph -->
+    <p></p>
+    <!-- /wp:paragraph -->
